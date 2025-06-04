@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão Digital Interativo</title>
+    <style>
+        :root {
+            --cor-primaria: #121212;
+            --cor-secundaria: #1E1E1E;
+            --cor-destaque: #BB86FC;
+            --cor-texto: #E1E1E1;
+            --cor-texto-secundario: #A0A0A0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--cor-primaria);
+            color: var(--cor-texto);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            overflow: hidden;
+        }
+        
+        .cartao {
+            background-color: var(--cor-secundaria);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .foto-perfil {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        p.descricao {
+            color: var(--cor-texto-secundario);
+            margin-bottom: 25px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .botoes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .botao {
+            background-color: var(--cor-primaria);
+            color: var(--cor-texto);
+            border: none;
+            border-radius: 10px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .botao:hover {
+            background-color: var(--cor-destaque);
+            color: var(--cor-primaria);
+            transform: translateY(-3px);
+        }
+        
+        .botao i {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        
+        .botao span {
+            font-size: 12px;
+        }
+        
+        @media (max-width: 480px) {
+            .cartao {
+                padding: 20px;
+            }
+            
+            .botoes {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="cartao">
+        <img src="fotor-20250604161257.png" alt="Foto de Perfil" class="foto-perfil">
+        <h1>Junia Durão</h1>
+        <p class="descricao">Profissional em [sua área]. Entre em contato para mais informações!</p>
+        
+        <div class="botoes">
+            <a href="https://wa.me/SEUNUMERO" class="botao" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            
+            <a href="https://maps.google.com/?q=SUALOCALIZACAO" class="botao" target="_blank">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Localização</span>
+            </a>
+            
+            <a href="#" class="botao">
+                <i class="fas fa-envelope"></i>
+                <span>E-mail</span>
+            </a>
+            
+            <a href="#" class="botao">
+                <i class="fas fa-portrait"></i>
+                <span>Portfólio</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
